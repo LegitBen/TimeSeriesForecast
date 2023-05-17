@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: TimeSeries
-Version: 1.0
+Version: 2.0
 Summary: Пакеты и модули для прогнозирования временного ряда
 Requires-Python: >=3.9
 

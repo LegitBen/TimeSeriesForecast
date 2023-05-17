@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 class PricePredictor(ABC):
     def __init__(self, model_name) -> None:
 
-        with open (f"fbmodel.bin", "rb",) as fin:
+        with open (f"models/fbmodel.bin", "rb",) as fin:
             try:
                 self.model = pickle.load(fin)
             except (OSError, FileNotFoundError, TypeError):

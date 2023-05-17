@@ -2,6 +2,7 @@ MANIFEST.in
 README.txt
 requirements.txt
 setup.py
+Forecasting/ForecastingApp.py
 Forecasting/Timeseries_model.py
 Forecasting/__init__.py
 Forecasting/utils.py
