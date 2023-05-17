@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз цены</title>
+</head>
+<body>
+    <h1>Прогноз цены</h1>
+
+    <form action="{{ url_for('predict_xom') }}" method="post">
+        <label for="pdate">Следующий день:</label>
+        <option value="{{pdate}}">{{pdate}}</option>
+        <label for="ppred">Предсказанная цена:</label>
+        <option value="{{ppred}}">{{ppred}}</option>
+
+    </form>
+<h2>График цены и прогноза цены </h2>
+<img src= "https://i.ibb.co/mq16HRy/prophetforecast3.jpg" width="600" height="400" />
+
+</body>
+</html>
