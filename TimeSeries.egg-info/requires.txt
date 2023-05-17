@@ -1,0 +1,9 @@
+setuptools>=65.5.1
+numpy
+flask
+wheel
+scikit-learn
+pandas
+prophet
+seaborn
+matplotlib
