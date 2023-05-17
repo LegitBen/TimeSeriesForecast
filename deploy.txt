@@ -1,0 +1,2 @@
+Библиотека для прогнозирования временного ряда Prophet
+https://facebook.github.io/prophet/docs/quick_start.html
