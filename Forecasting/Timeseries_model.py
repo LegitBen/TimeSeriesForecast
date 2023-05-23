@@ -27,14 +27,12 @@ def fb_prophet_function(data, **params):
     prophet_model = Prophet(**params)
     prophet_model.fit(data)
     future = prophet_model.make_future_dataframe(periods=20, freq='D')
-    pred = prophet_model.predict(future)
-    return prophet_model, pred
+    #pred = prophet_model.predict(future)
+    return prophet_model
 
 
 fbmodel = fb_prophet_function(data=prophetdf_train, weekly_seasonality=False, yearly_seasonality=False, changepoint_range=0.8,changepoint_prior_scale=0.8)
 
-
-#fbforecast=fbmodel[1]
 
 import pickle
 with open ("models/fbmodel.pckl", 'wb') as f_out:
@@ -45,9 +43,5 @@ with open('models/fbmodel.pckl', 'rb') as f_in:
 
 future=testmodel.make_future_dataframe(periods=20, freq='D')
 fbforecast=testmodel.predict(future)
-#testmodel = Prophet(weekly_seasonality=False, yearly_seasonality=False, changepoint_range=0.8,
-#                     changepoint_prior_scale=0.8)
-#testmodel.fit(prophetdf_train)
-
 MAE=mean_absolute_error(prophetdf.y[-20:], fbforecast.yhat[-20:])
 print("MAE=", MAE)
